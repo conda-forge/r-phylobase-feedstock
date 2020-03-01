@@ -1,4 +1,4 @@
-{% set version = "0.8.8" %}
+{% set version = "0.8.10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/phylobase_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/phylobase/phylobase_{{ version }}.tar.gz
-  sha256: 9ed99aa9f52dfbc83a2cc2de6b2aeb9e4574b78b931ecf0c5ce24fab08871a24
+  sha256: 5a44380ff49bab333a56f6f96157324ade8afb4af0730e013194c4badb0bf94b
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -54,11 +54,10 @@ test:
 about:
   home: https://github.com/fmichonneau/phylobase
   license: GPL-2
-  summary: Provides a base S4 class for comparative methods, incorporating one or more trees
-    and trait data.
+  summary: Provides a base S4 class for comparative methods, incorporating one or more trees and trait data.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
