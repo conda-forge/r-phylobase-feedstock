@@ -54,7 +54,7 @@ test:
 
 about:
   home: https://github.com/fmichonneau/phylobase
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Provides a base S4 class for comparative methods, incorporating one or more trees and trait data.
   license_family: GPL2
   license_file:
