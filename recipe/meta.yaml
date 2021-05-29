@@ -14,7 +14,8 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  skip: True  # [win]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
